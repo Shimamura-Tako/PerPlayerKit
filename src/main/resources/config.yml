@@ -1,57 +1,57 @@
+# 配置文件版本（请勿修改）
+config-version: 1
 
-config-version: 1 #do not change this value
+# 数据库配置（仅MySQL/Redis需要填写）
+# 强烈推荐使用 MySQL 或 SQLite
+# 任何环境下都不建议使用 YAML 存储
 
-
-#Database credentials are only required if you are using MySQL or Redis
-# It is strongly recommended to use MySQL or SQLite
-# YAML should not be used in any environment
-
-storage: #sqlite, mysql, redis, yml (yaml)
+storage: # 存储类型：sqlite, mysql, redis, yml
   type: "sqlite"
 
 mysql:
-  host: "localhost"
-  port: "3306"
-  dbname: "kitdatabase"
-  username: "username"
-  password: "pa55w0rd"
-  useSSL: false
-  maximumPoolSize: 10 #only change this if you know what your doing
+  host: "localhost" # 数据库地址
+  port: "3306" # 端口
+  dbname: "kitdatabase" # 数据库名称
+  username: "username" # 用户名
+  password: "pa55w0rd" # 密码
+  useSSL: false # 禁用SSL
+  maximumPoolSize: 10 # 连接池大小（非专业人士请勿修改）
 
 redis:
-  host: "localhost"
-  port: 6379
-  password: "pa55w0rd"
-
-# Automatic backup settings for file-based storage (SQLite, YAML)
+  host: "localhost" # Redis地址
+  port: 6379 # Redis端口
+  password: "pa55w0rd" # Redis密码
+  
+# 自动备份设置（仅文件存储有效）
 backup:
-  enabled: true # Enable automatic backups for file-based storage methods
-  # Retention policy:
-  # - 1 backup per hour for the last 24 hours
-  # - 1 backup per day for the last 7 days  
-  # - 1 backup per week for the last 30 days
-  # - 1 backup per month for the last 365 days
-  # Backups are stored in the plugins/PerPlayerKit/backups/ directory
+  enabled: true # 启用自动备份
+# 备份保留策略：
+# - 24小时内每小时保留1份
+# - 7天内每天保留1份
+# - 30天内每周保留1份
+# - 365天内每月保留1份
+# 备份存储路径：plugins/PerPlayerKit/backups/
 
 motd:
-  enabled: true
-  delay: 5
-  message: #join messages using mini message format
-    - ""
-    - "<gray>   <st>                </st> <aqua><b>Per Player Kits</b><gray> <st>                </st>"
-    - ""
-    - "         <white>Type <aqua>/kit<white>, <aqua>/k <white>or <aqua>/pk<white> to get started!"
-    - ""
-    - "<gray>   <st>                                                         "
-    - ""
+  enabled: true # 启用登录消息
+  delay: 5 # 显示延迟（秒）
+  message: # 登录消息（MiniMessage格式）
+    - ''
+    - <gray>   <st>                </st> <aqua><b>PerPlayerKit插件</b><gray> <st>                </st>
+    - ''
+    - '         <white>输入 <aqua>/kit<white>、<aqua>/k <white>或 <aqua>/pk<white> 开始使用'
+    - ''
+    - '<gray>   <st>                                                         '
+    - ''
 
-scheduled-broadcast: #uses mini message format
-  enabled: true
-  period: 90 #in seconds
-  messages:
-    - "<white>Check out public kits with the <aqua>/pk<white> command!"
-    - "<white>Want to share a kit? Use the <aqua>/sharekit <slot><white> command!"
-    - "<white>Type <aqua>/kit<white>, <aqua>/k <white>or <aqua>/pk<white> to get started!"
+# 周期公告设置
+scheduled-broadcast: # 使用MiniMessage格式
+  enabled: true # 启用周期公告
+  period: 90 # 间隔时间（秒）
+  messages: # 公告内容（MiniMessage格式）
+    - <white>使用命令 <aqua>/pk<white> 查看公开KIT!"
+    - <white>分享KIT请使用 <aqua>/sharekit <slot><white> 命令
+    - <white>输入 <aqua>/kit<white> 打开个人KIT栏
 
 interface:
   glass-material: BLUE_STAINED_GLASS_PANE
@@ -60,83 +60,84 @@ interface:
 kitroom:
   items:
     1:
-      name: "Crystal"
-      material: "END_CRYSTAL"
+      name: "水晶" # 显示名称
+      material: "END_CRYSTAL" # 物品材质
     2:
-      name: "Training"
+      name: "训练"
       material: "WOODEN_SWORD"
     3:
-      name: "Potions"
+      name: "药水"
       material: "SPLASH_POTION"
     4:
-      name: "Armory"
+      name: "盔甲"
       material: "NETHERITE_SWORD"
     5:
-      name: "Axe & UHC"
+      name: "斧头 & UHC"
       material: "SHIELD"
 
 disabled-command-worlds:
   - "example_world"
 
-disabled-command-message: "<red>Kits are disabled here!</red>"
+disabled-command-message: "<red>当前世界禁止使用KIT!</red>" # 禁用提示
 
-
+# 公共礼包配置
 publickits:
   kit1:
-    name: "Kit 1"
-    icon: "DIAMOND_SWORD"
+    name: "Kit 1" # 礼包名称
+    icon: "DIAMOND_SWORD" # 图标材质
 
-prefix: "<gray>[<aqua>Kits</aqua>]</gray> "
+prefix: "<gray>[<aqua>Kits</aqua>]</gray> " # 消息前缀
 
-use-display-name: false #For example, set to true if you want to display nicknames set by other plugins.
+use-display-name: false # 是否使用显示名称（兼容昵称插件）
 
+# 系统消息模板
 messages:
-  disable-kit-messages: false # Set to true to disable all kit action messages (e.g. player loaded a kit, player repaired gear, etc.)
+  disable-kit-messages: false # 设置为true禁用所有KIT消息 (例如：玩家加载了KIT, 玩家修复了装备, 如此之类。)
   player-repaired:
     enabled: true
-    message: "<gray>%player% repaired their gear</gray>"
+    message: "<gray>%player% 修复了装备</gray>"
     permission: "perplayerkit.kitnotify"
   player-healed:
     enabled: true
-    message: "<gray>%player% healed themselves</gray>"
+    message: "<gray>%player% 恢复了生命值</gray>"
     permission: "perplayerkit.kitnotify"
   player-opened-kit-room:
     enabled: true
-    message: "<gray>%player% opened the Kit Room</gray>"
+    message: "<gray>%player% 打开了无限物品栏</gray>"
     permission: "perplayerkit.kitnotify"
   player-loaded-private-kit:
     enabled: true
-    message: "<gray>%player% loaded a kit</gray>"
+    message: "<gray>%player% 加载了KIT</gray>"
     permission: "perplayerkit.kitnotify"
   player-loaded-public-kit:
     enabled: true
-    message: "<gray>%player% loaded a public kit</gray>"
+    message: "<gray>%player% 领取了KIT</gray>"
     permission: "perplayerkit.kitnotify"
   player-loaded-enderchest:
     enabled: true
-    message: "<gray>%player% loaded an ender chest.</gray>"
+    message: "<gray>%player% 加载了末影箱</gray>"
     permission: "perplayerkit.kitnotify"
   player-copied-kit:
     enabled: true
-    message: "<gray>%player% copied a kit</gray>"
+    message: "<gray>%player% 复制了KIT配置</gray>"
     permission: "perplayerkit.kitnotify"
   player-copied-ec:
     enabled: true
-    message: "<gray>%player% copied an ender chest</gray>"
+    message: "<gray>%player% 复制了末影箱</gray>"
     permission: "perplayerkit.kitnotify"
   player-regeared:
     enabled: true
-    message: "<gray>%player% regeared</gray>"
+    message: "<gray>%player% 使用了快速换装</gray>"
     permission: "perplayerkit.kitnotify"
 
-
+# 防滥用设置
 anti-exploit:
-  only-allow-kitroom-items: false #requires that items be in the kitroom before they can be used in a kit.
-  import-filter: false #requires only-allow-kitroom-items to be true. prevents the duplications of items not in the kitroom by using the kit import button.
-  block-spaces-in-commands: false #prevents bypassing command filters.
-  prevent-shulkers-dropping-items: false #prevents shulkers from dropping items when broken. Anti-lag feature.
+  only-allow-kitroom-items: false # 仅允许使用礼包大厅存在的物品
+  import-filter: false # 启用导入过滤（需配合上项）
+  block-spaces-in-commands: false # 阻止命令中的空格绕过
+  prevent-shulkers-dropping-items: false # 阻止潜影盒掉落物品（防卡顿）
 
-
+# 快速换装设置
 regear:
   rg-mode: "command" #OPTIONS: command, shulker
   regear-mode: "command" #OPTIONS: command, shulker
@@ -150,7 +151,9 @@ regear:
   # whitelist: []
   #
   #
-  invert-whitelist: false #setting this to true makes the whitelist a blacklist
+
+    # 物品白名单设置
+  invert-whitelist: false # true=列表变黑名单
   whitelist:
     - ENDER_PEARL
     - END_CRYSTAL
@@ -169,41 +172,45 @@ regear:
     - BOW
 
 
-# Various feature flags for the plugin
+# 功能开关
 feature:
-  set-health-on-kit-load: false
-  set-hunger-on-kit-load: false
-  set-saturation-on-kit-load: false
-  remove-potion-effects-on-kit-load: false
+  # KIT加载时效果
+  set-health-on-kit-load: false # 设置生命值
+  set-hunger-on-kit-load: false # 设置饱食度
+  set-saturation-on-kit-load: false # 设置饱和度
+  remove-potion-effects-on-kit-load: false # 清除药水效果
 
-  heal-on-enderchest-load: false
-  feed-on-enderchest-load: false
-  set-saturation-on-enderchest-load: false
-  remove-potion-effects-on-enderchest-load: false
+  # 末影箱加载时效果
+  heal-on-enderchest-load: false # 设置生命值
+  feed-on-enderchest-load: false # 设置饱食度
+  set-saturation-on-enderchest-load: false # 设置饱和度
+  remove-potion-effects-on-enderchest-load: false # 清除药水效果
 
-  heal-remove-effects: false #makes the /heal command remove potion effects in addition to healing
+  heal-remove-effects: false # /heal命令同时清除效果
 
-  rekit-on-respawn: true
-  rekit-on-kill: false
+  # 自动补包设置
+  rekit-on-respawn: true # 重生时自动补包
+  rekit-on-kill: false # 击杀时自动补包
 
-  broadcast-kit-messages: true #broadcasts when a player loads a kit (applies to both kits and enderchesets)
+  # 通知设置
+  broadcast-kit-messages: true # 广播玩家加载KIT和末影箱的操作
 
-  broadcast-on-player-action: true #broadcasts when a player uses a kit, copies a kit, etc.
+  broadcast-on-player-action: true # 广播玩家操作
 
-  send-update-message-on-join: true #sends a message to players with perplayerkit.admin when they join the server if a new version is available
+  send-update-message-on-join: true # 管理员插件更新提示
 
-  old-death-drops: false #makes it so players drop items in a condensed area rather than spreading out when they die
+  old-death-drops: false # 传统死亡掉落模式
 
-# Sound settings for plugin feedback
+# 音效配置
 sounds:
-  enabled: true
-  # Sound played on successful actions (e.g. saving a kit)
+  enabled: true # 启用音效
+  # 成功音效
   success: ENTITY_PLAYER_LEVELUP
-  # Sound played on failed actions (e.g. attempting to use a disabled command)
+  # 失败音效
   failure: ENTITY_ITEM_BREAK
-  # Sound played when a button is clicked in a GUI
+  # 按钮点击音效
   click: UI_BUTTON_CLICK
-  # Sound played when a GUI is opened
+  # 打开界面音效
   open_gui: UI_BUTTON_CLICK
-  # Sound played when a GUI is closed
+  # 关闭界面音效
   close_gui: UI_BUTTON_CLICK
