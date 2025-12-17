@@ -86,14 +86,14 @@ public class GUI {
         for (int i = 41; i < 54; i++) {
             menu.getSlot(i).setItem(ItemUtil.createGlassPane());
         }
-        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>BOOTS</b></gray>"));
-        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>LEGGINGS</b></gray>"));
-        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>CHESTPLATE</b></gray>"));
-        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>HELMET</b></gray>"));
-        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>OFFHAND</b></gray>"));
+        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>靴子</b></gray>"));
+        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>护腿</b></gray>"));
+        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>胸甲</b></gray>"));
+        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>头盔</b></gray>"));
+        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>副手</b></gray>"));
 
-        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● Import from inventory</gray>"));
-        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● Shift click to clear</gray>"));
+        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● 从物品栏导入</gray>"));
+        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
         menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
         addMainButton(menu.getSlot(53));
         addClear(menu.getSlot(52));
@@ -118,14 +118,14 @@ public class GUI {
         for (int i = 41; i < 54; i++) {
             menu.getSlot(i).setItem(ItemUtil.createGlassPane());
         }
-        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>BOOTS</b></gray>"));
-        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>LEGGINGS</b></gray>"));
-        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>CHESTPLATE</b></gray>"));
-        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>HELMET</b></gray>"));
-        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>OFFHAND</b></gray>"));
+        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>靴子</b></gray>"));
+        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>护腿</b></gray>"));
+        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>胸甲</b></gray>"));
+        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>头盔</b></gray>"));
+        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>副手</b></gray>"));
 
-        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● Import from inventory</gray>"));
-        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● Shift click to clear</gray>"));
+        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● 从物品栏导入</gray>"));
+        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
         menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
         addMainButton(menu.getSlot(53));
         addClear(menu.getSlot(52));
@@ -156,9 +156,9 @@ public class GUI {
         for (int i = 9; i < 36; i++) {
             allowModification(menu.getSlot(i));
         }
-        menu.getSlot(51).setItem(createItem(Material.ENDER_CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● Import from enderchest</gray>"));
-        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● Shift click to clear</gray>"));
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
+        menu.getSlot(51).setItem(createItem(Material.ENDER_CHEST, 1, "<green><b>导入</b></green>", "<gray>● 从末影箱导入</gray>"));
+        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>清空KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>返回</b></red>"));
         addMainButton(menu.getSlot(53));
         addClear(menu.getSlot(52), 9, 36);
         addImportEC(menu.getSlot(51));
@@ -179,13 +179,13 @@ public class GUI {
         for (int i = 41; i < 54; i++) {
             menu.getSlot(i).setItem(ItemUtil.createGlassPane());
         }
-        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>BOOTS</b></gray>"));
-        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>LEGGINGS</b></gray>"));
-        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>CHESTPLATE</b></gray>"));
-        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>HELMET</b></gray>"));
-        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>OFFHAND</b></gray>"));
+        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>靴子</b></gray>"));
+        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>护腿</b></gray>"));
+        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>胸甲</b></gray>"));
+        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>头盔</b></gray>"));
+        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>副手</b></gray>"));
 
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>CLOSE</b></red>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>关闭</b></red>"));
         menu.getSlot(53).setClickHandler((player, info) -> {
             SoundManager.playClick(player);
             info.getClickedMenu().close();
@@ -196,7 +196,7 @@ public class GUI {
             for (int i = 0; i < 41; i++) {
                 allowModification(menu.getSlot(i));
             }
-            menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● Shift click to delete kit</gray>"));
+            menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>清空KIT</b></red>", "<gray>● 按住Shift点击删除KIT</gray>"));
             addClearKit(menu.getSlot(52), target, slot);
         }
 
@@ -225,7 +225,7 @@ public class GUI {
             }
         }
 
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>CLOSE</b></red>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>关闭</b></red>"));
         menu.getSlot(53).setClickHandler((player, info) -> {
             SoundManager.playClick(player);
             info.getClickedMenu().close();
@@ -236,7 +236,7 @@ public class GUI {
             for (int i = 9; i < 36; i++) {
                 allowModification(menu.getSlot(i));
             }
-            menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR ENDERCHEST</b></red>", "<gray>● Shift click to delete enderchest</gray>"));
+            menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>清空末影箱</b></red>", "<gray>● 按住Shift点击删除末影箱</gray>"));
             addClearEnderchest(menu.getSlot(52), target, slot);
         }
 
@@ -251,23 +251,23 @@ public class GUI {
             menu.getSlot(i).setItem(createGlassPane());
         }
         for (int i = 9; i < 18; i++) {
-            menu.getSlot(i).setItem(createItem(Material.CHEST, 1, "<dark_aqua><b>Kit " + (i - 8) + "</b></dark_aqua>", "<gray>● Left click to load kit</gray>", "<gray>● Right click to edit kit</gray>"));
+            menu.getSlot(i).setItem(createItem(Material.CHEST, 1, "<dark_aqua><b>Kit " + (i - 8) + "</b></dark_aqua>", "<gray>● 左键点击加载KIT</gray>", "<gray>● 右键点击编辑KIT</gray>"));
             addEditLoad(menu.getSlot(i), i - 8);
         }
         for (int i = 18; i < 27; i++) {
             if (KitManager.get().getItemStackArrayById(p.getUniqueId() + "ec" + (i - 17)) != null) {
-                menu.getSlot(i).setItem(createItem(Material.ENDER_CHEST, 1, "<dark_aqua><b>Enderchest " + (i - 17) + "</b></dark_aqua>", "<gray>● Left click to load kit</gray>", "<gray>● Right click to edit kit</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.ENDER_CHEST, 1, "<dark_aqua><b>Enderchest " + (i - 17) + "</b></dark_aqua>", "<gray>● 左键点击加载KIT</gray>", "<gray>● 右键点击编辑KIT</gray>"));
                 addEditLoadEC(menu.getSlot(i), i - 17);
             } else {
-                menu.getSlot(i).setItem(createItem(Material.ENDER_EYE, 1, "<dark_aqua><b>Enderchest " + (i - 17) + "</b></dark_aqua>", "<gray>● Click to create</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.ENDER_EYE, 1, "<dark_aqua><b>Enderchest " + (i - 17) + "</b></dark_aqua>", "<gray>● 点击创建</gray>"));
                 addEditEC(menu.getSlot(i), i - 17);
             }
         }
         for (int i = 27; i < 36; i++) {
             if (KitManager.get().getItemStackArrayById(p.getUniqueId().toString() + (i - 26)) != null) {
-                menu.getSlot(i).setItem(createItem(Material.KNOWLEDGE_BOOK, 1, "<green><b>KIT EXISTS</b></green>", "<gray>● Click to edit</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.KNOWLEDGE_BOOK, 1, "<green><b>KIT EXISTS</b></green>", "<gray>● 点击编辑</gray>"));
             } else {
-                menu.getSlot(i).setItem(createItem(Material.BOOK, 1, "<red><b>KIT NOT FOUND</b></red>", "<gray>● Click to create</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.BOOK, 1, "<red><b>KIT NOT FOUND</b></red>", "<gray>● 点击创建</gray>"));
             }
             addEdit(menu.getSlot(i), i - 26);
         }
@@ -276,12 +276,12 @@ public class GUI {
             menu.getSlot(i).setItem(createGlassPane());
         }
 
-        menu.getSlot(37).setItem(createItem(Material.NETHER_STAR, 1, "<green><b>KIT ROOM</b></green>"));
-        menu.getSlot(38).setItem(createItem(Material.BOOKSHELF, 1, "<yellow><b>PREMADE KITS</b></yellow>"));
-        menu.getSlot(39).setItem(createItem(Material.OAK_SIGN, 1, "<green><b>INFO</b></green>", "<gray>● Click a kit slot to load your kit</gray>", "<gray>● Right click or click the book to edit</gray>", "<gray>● Share kits with /sharekit <slot></gray>"));
-        menu.getSlot(41).setItem(createItem(Material.REDSTONE_BLOCK, 1, "<red><b>CLEAR INVENTORY</b></red>", "<gray>● Shift click</gray>"));
-        menu.getSlot(42).setItem(createItem(Material.COMPASS, 1, "<green><b>SHARE KITS</b></green>", "<gray>● /sharekit <slot></gray>"));
-        menu.getSlot(43).setItem(createItem(Material.EXPERIENCE_BOTTLE, 1, "<green><b>REPAIR ITEMS</b></green>"));
+        menu.getSlot(37).setItem(createItem(Material.NETHER_STAR, 1, "<green><b>无限物品栏</b></green>"));
+        menu.getSlot(38).setItem(createItem(Material.BOOKSHELF, 1, "<yellow><b>预制KIT</b></yellow>"));
+        menu.getSlot(39).setItem(createItem(Material.OAK_SIGN, 1, "<green><b>INFO</b></green>", "<gray>● 点击一个KIT槽位加载你的KIT</gray>", "<gray>● 右键或点击书来编辑</gray>", "<gray>● 使用命令 /sharekit <slot> 分享KIT</gray>"));
+        menu.getSlot(41).setItem(createItem(Material.REDSTONE_BLOCK, 1, "<red><b>清空物品栏</b></red>", "<gray>● 按住Shift点击</gray>"));
+        menu.getSlot(42).setItem(createItem(Material.COMPASS, 1, "<green><b>分享KIT</b></green>", "<gray>● /sharekit <slot></gray>"));
+        menu.getSlot(43).setItem(createItem(Material.EXPERIENCE_BOTTLE, 1, "<green><b>修复物品</b></green>"));
         addRepairButton(menu.getSlot(43));
         addKitRoom(menu.getSlot(37));
         addPublicKitMenu(menu.getSlot(38));
@@ -309,14 +309,14 @@ public class GUI {
             }
         }
 
-        menu.getSlot(45).setItem(createItem(Material.BEACON, 1, "<dark_aqua><b>REFILL</b></dark_aqua>"));
+        menu.getSlot(45).setItem(createItem(Material.BEACON, 1, "<dark_aqua><b>重新装填</b></dark_aqua>"));
         addKitRoom(menu.getSlot(45), page);
 
         if (!p.hasPermission("perplayerkit.editkitroom")) {
-            menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
+            menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>返回</b></red>"));
             addMainButton(menu.getSlot(53));
         } else {
-            menu.getSlot(53).setItem(createItem(Material.BARRIER, page + 1, "<red><b>EDIT MENU</b></red>", "<red>SHIFT RIGHT CLICK TO SAVE</red>"));
+            menu.getSlot(53).setItem(createItem(Material.BARRIER, page + 1, "<red><b>修改菜单</b></red>", "<red>按住Shift右键点击保存</red>"));
         }
         addKitRoom(menu.getSlot(47), 0);
         addKitRoom(menu.getSlot(48), 1);
@@ -338,13 +338,13 @@ public class GUI {
         ItemStack[] kit = KitManager.get().getPublicKit(id);
 
         if (kit == null) {
-            p.sendMessage(ChatColor.RED + "Kit not found");
+            p.sendMessage(ChatColor.RED + "未找到这个KIT");
             if (p.hasPermission("perplayerkit.admin")) {
-                p.sendMessage(ChatColor.RED + "To assign a kit to this publickit use /savepublickit <id>");
+                p.sendMessage(ChatColor.RED + "要将此KIT设置为公开KIT，使用 /savepublickit <id>");
             }
             return null;
         }
-        Menu menu = ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "Viewing Public Kit: " + id).redraw(true).build();
+        Menu menu = ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "浏览公开KIT: " + id).redraw(true).build();
 
         for (int i = 0; i < 54; i++) {
             menu.getSlot(i).setItem(ItemUtil.createGlassPane());
@@ -360,14 +360,14 @@ public class GUI {
             menu.getSlot(i + 9).setItem(kit[i]);
         }
 
-        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>BOOTS</b></gray>"));
-        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>LEGGINGS</b></gray>"));
-        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>CHESTPLATE</b></gray>"));
-        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>HELMET</b></gray>"));
-        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>OFFHAND</b></gray>"));
+        menu.getSlot(45).setItem(createItem(Material.CHAINMAIL_BOOTS, 1, "<gray><b>靴子</b></gray>"));
+        menu.getSlot(46).setItem(createItem(Material.CHAINMAIL_LEGGINGS, 1, "<gray><b>护腿</b></gray>"));
+        menu.getSlot(47).setItem(createItem(Material.CHAINMAIL_CHESTPLATE, 1, "<gray><b>胸甲</b></gray>"));
+        menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>头盔</b></gray>"));
+        menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>副手</b></gray>"));
 
-        menu.getSlot(52).setItem(createItem(Material.APPLE, 1, "<green><b>LOAD KIT</b></green>"));
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
+        menu.getSlot(52).setItem(createItem(Material.APPLE, 1, "<green><b>加载KIT</b></green>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>返回</b></red>"));
         addPublicKitMenu(menu.getSlot(53));
         addLoadPublicKit(menu.getSlot(52), id);
 
@@ -383,7 +383,7 @@ public class GUI {
         }
 
         for (int i = 18; i < 36; i++) {
-            menu.getSlot(i).setItem(ItemUtil.createItem(Material.BOOK, 1, "<gray><b>MORE KITS COMING SOON</b></gray>"));
+            menu.getSlot(i).setItem(ItemUtil.createItem(Material.BOOK, 1, "<gray><b>更多KIT即将到来</b></gray>"));
         }
 
         List<PublicKit> publicKitList = KitManager.get().getPublicKitList();
@@ -391,16 +391,16 @@ public class GUI {
         for (int i = 0; i < publicKitList.size(); i++) {
             if (KitManager.get().hasPublicKit(publicKitList.get(i).id)) {
                 if (player.hasPermission("perplayerkit.admin")) {
-                    menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name, "<gray>● [ADMIN] Shift click to edit</gray>"));
+                    menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name, "<gray>● [管理员] 按住Shift右键点击编辑</gray>"));
                 } else {
                     menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name));
                 }
                 addPublicKitButton(menu.getSlot(i + 18), publicKitList.get(i).id);
             } else {
                 if (player.hasPermission("perplayerkit.admin")) {
-                    menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name + " <red><b>[UNASSIGNED]</b></red>", "<gray>● Admins have not yet setup this kit yet</gray>", "<gray>● [ADMIN] Shift click to edit</gray>"));
+                    menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name + " <red><b>[UNASSIGNED]</b></red>", "<gray>● 管理员还未设置这个KIT</gray>", "<gray>● [管理员] 按住Shift点击编辑</gray>"));
                 } else {
-                    menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name + " <red><b>[UNASSIGNED]</b></red>", "<gray>● Admins have not yet setup this kit yet</gray>"));
+                    menu.getSlot(i + 18).setItem(createItem(publicKitList.get(i).icon, 1, ChatColor.RESET + publicKitList.get(i).name + " <red><b>[UNASSIGNED]</b></red>", "<gray>● 管理员还未设置这个KIT</gray>"));
                 }
             }
 
@@ -411,7 +411,7 @@ public class GUI {
 
         addMainButton(menu.getSlot(53));
 
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>返回</b></red>"));
         menu.open(player);
     }
 
@@ -444,7 +444,7 @@ public class GUI {
             SoundManager.playClick(player);
             if (info.getClickType().isShiftClick()) {
                 KitManager.get().deleteKit(target, slotNum);
-                player.sendMessage(ChatColor.GREEN + "Kit " + slotNum + " deleted for player!");
+                player.sendMessage(ChatColor.GREEN + "已为玩家删除KIT " + slotNum + " !");
                 SoundManager.playSuccess(player);
                 kitDeletionFlag.add(player.getUniqueId());
                 info.getClickedMenu().close();
@@ -458,7 +458,7 @@ public class GUI {
             SoundManager.playClick(player);
             if (info.getClickType().isShiftClick()) {
                 KitManager.get().deleteEnderchest(target, slotNum);
-                player.sendMessage(ChatColor.GREEN + "Enderchest " + slotNum + " deleted for player!");
+                player.sendMessage(ChatColor.GREEN + "已为玩家删除末影箱 " + slotNum + " !");
                 SoundManager.playSuccess(player);
                 kitDeletionFlag.add(player.getUniqueId());
                 info.getClickedMenu().close();
@@ -538,7 +538,7 @@ public class GUI {
                     data[i] = player.getInventory().getContents()[i];
                 }
                 KitRoomDataManager.get().setKitRoom(page, data);
-                player.sendMessage("saved menu");
+                player.sendMessage("保存了菜单");
                 SoundManager.playSuccess(player);
             }
         });
@@ -559,7 +559,7 @@ public class GUI {
             SoundManager.playClick(player);
             if (info.getClickType().isShiftClick()) {
                 player.getInventory().clear();
-                player.sendMessage(ChatColor.GREEN + "Inventory cleared");
+                player.sendMessage(ChatColor.GREEN + "物品栏已清空");
                 SoundManager.playSuccess(player);
             }
         });
@@ -655,27 +655,27 @@ public class GUI {
     }
 
     public Menu createPublicKitMenu(String id) {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "Public Kit: " + id).build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "公开Kit: " + id).build();
     }
 
     public Menu createECMenu(int slot) {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "Enderchest: " + slot).build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "末影箱: " + slot).build();
     }
 
     public Menu createInspectMenu(int slot, String playerName) {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "Inspecting " + playerName + "'s kit " + slot).build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "正在检查 " + playerName + " 的KIT " + slot).build();
     }
 
     public Menu createInspectEcMenu(int slot, String playerName) {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "Inspecting " + playerName + "'s enderchest " + slot).build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "正在检查 " + playerName + " 的末影箱 " + slot).build();
     }
 
     public Menu createMainMenu(Player p) {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + p.getName() + "'s Kits").build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + p.getName() + " 的KIT").build();
     }
 
     public Menu createKitRoom() {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "Kit Room").redraw(true).build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "无限物品栏").redraw(true).build();
     }
 
     public void allowModification(Slot slot) {
