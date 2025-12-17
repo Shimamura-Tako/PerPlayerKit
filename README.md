@@ -1,12 +1,12 @@
 # PerPlayerKit
 
-Join the discord for more information and support: [Discord](https://discord.gg/5djuBSKWuV)
+加入官方Discord（英语）获得更多信息和支持: [Discord](https://discord.gg/5djuBSKWuV)
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-New to PerPlayerKit? Check out our [Simple Setup Guide](./SIMPLE_SETUP_GUIDE.md) for a step-by-step walkthrough that gets you up and running in minutes!
+第一次用PerPlayerKit? 查看[简易设置指南](./SIMPLE_SETUP_GUIDE.md)，手把手教你在几分钟里设置好插件!
 
-![Main Menu](./images/MainMenu.png)
+![主菜单](./images/MainMenu.png)
 
 ## License: AGPLv3
 
