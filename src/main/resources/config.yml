@@ -49,7 +49,7 @@ scheduled-broadcast: # 使用MiniMessage格式
   enabled: true # 启用周期公告
   period: 90 # 间隔时间（秒）
   messages: # 公告内容（MiniMessage格式）
-    - <white>使用命令 <aqua>/pk<white> 查看公开KIT!"
+    - <white>使用命令 <aqua>/pk<white> 查看公开KIT!
     - <white>分享KIT请使用 <aqua>/sharekit <slot><white> 命令
     - <white>输入 <aqua>/kit<white> 打开个人KIT栏
 
