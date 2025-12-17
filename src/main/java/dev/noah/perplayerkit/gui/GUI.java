@@ -92,9 +92,9 @@ public class GUI {
         menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>头盔</b></gray>"));
         menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>副手</b></gray>"));
 
-        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● 从物品栏导入</gray>"));
-        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
+        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>导入</b></green>", "<gray>● 从物品栏导入</gray>"));
+        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>清空KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>返回</b></red>"));
         addMainButton(menu.getSlot(53));
         addClear(menu.getSlot(52));
         addImport(menu.getSlot(51));
@@ -124,9 +124,9 @@ public class GUI {
         menu.getSlot(48).setItem(createItem(Material.CHAINMAIL_HELMET, 1, "<gray><b>头盔</b></gray>"));
         menu.getSlot(49).setItem(createItem(Material.SHIELD, 1, "<gray><b>副手</b></gray>"));
 
-        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>IMPORT</b></green>", "<gray>● 从物品栏导入</gray>"));
-        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>CLEAR KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
-        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>BACK</b></red>"));
+        menu.getSlot(51).setItem(createItem(Material.CHEST, 1, "<green><b>导入</b></green>", "<gray>● 从物品栏导入</gray>"));
+        menu.getSlot(52).setItem(createItem(Material.BARRIER, 1, "<red><b>清空KIT</b></red>", "<gray>● 按住Shift点击清空</gray>"));
+        menu.getSlot(53).setItem(createItem(Material.OAK_DOOR, 1, "<red><b>返回</b></red>"));
         addMainButton(menu.getSlot(53));
         addClear(menu.getSlot(52));
         addImport(menu.getSlot(51));
@@ -256,18 +256,18 @@ public class GUI {
         }
         for (int i = 18; i < 27; i++) {
             if (KitManager.get().getItemStackArrayById(p.getUniqueId() + "ec" + (i - 17)) != null) {
-                menu.getSlot(i).setItem(createItem(Material.ENDER_CHEST, 1, "<dark_aqua><b>Enderchest " + (i - 17) + "</b></dark_aqua>", "<gray>● 左键点击加载KIT</gray>", "<gray>● 右键点击编辑KIT</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.ENDER_CHEST, 1, "<dark_aqua><b>末影箱 " + (i - 17) + "</b></dark_aqua>", "<gray>● 左键点击加载KIT</gray>", "<gray>● 右键点击编辑KIT</gray>"));
                 addEditLoadEC(menu.getSlot(i), i - 17);
             } else {
-                menu.getSlot(i).setItem(createItem(Material.ENDER_EYE, 1, "<dark_aqua><b>Enderchest " + (i - 17) + "</b></dark_aqua>", "<gray>● 点击创建</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.ENDER_EYE, 1, "<dark_aqua><b>末影箱 " + (i - 17) + "</b></dark_aqua>", "<gray>● 点击创建</gray>"));
                 addEditEC(menu.getSlot(i), i - 17);
             }
         }
         for (int i = 27; i < 36; i++) {
             if (KitManager.get().getItemStackArrayById(p.getUniqueId().toString() + (i - 26)) != null) {
-                menu.getSlot(i).setItem(createItem(Material.KNOWLEDGE_BOOK, 1, "<green><b>KIT EXISTS</b></green>", "<gray>● 点击编辑</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.KNOWLEDGE_BOOK, 1, "<green><b>KIT存在</b></green>", "<gray>● 点击编辑</gray>"));
             } else {
-                menu.getSlot(i).setItem(createItem(Material.BOOK, 1, "<red><b>KIT NOT FOUND</b></red>", "<gray>● 点击创建</gray>"));
+                menu.getSlot(i).setItem(createItem(Material.BOOK, 1, "<red><b>KIT未找到</b></red>", "<gray>● 点击创建</gray>"));
             }
             addEdit(menu.getSlot(i), i - 26);
         }
@@ -276,9 +276,9 @@ public class GUI {
             menu.getSlot(i).setItem(createGlassPane());
         }
 
-        menu.getSlot(37).setItem(createItem(Material.NETHER_STAR, 1, "<green><b>无限物品栏</b></green>"));
+        menu.getSlot(37).setItem(createItem(Material.NETHER_STAR, 1, "<green><b>物品房间</b></green>"));
         menu.getSlot(38).setItem(createItem(Material.BOOKSHELF, 1, "<yellow><b>预制KIT</b></yellow>"));
-        menu.getSlot(39).setItem(createItem(Material.OAK_SIGN, 1, "<green><b>INFO</b></green>", "<gray>● 点击一个KIT槽位加载你的KIT</gray>", "<gray>● 右键或点击书来编辑</gray>", "<gray>● 使用命令 /sharekit <slot> 分享KIT</gray>"));
+        menu.getSlot(39).setItem(createItem(Material.OAK_SIGN, 1, "<green><b>提示</b></green>", "<gray>● 点击一个KIT槽位加载你的KIT</gray>", "<gray>● 右键或点击书来编辑</gray>", "<gray>● 使用命令 /sharekit <slot> 分享KIT</gray>"));
         menu.getSlot(41).setItem(createItem(Material.REDSTONE_BLOCK, 1, "<red><b>清空物品栏</b></red>", "<gray>● 按住Shift点击</gray>"));
         menu.getSlot(42).setItem(createItem(Material.COMPASS, 1, "<green><b>分享KIT</b></green>", "<gray>● /sharekit <slot></gray>"));
         menu.getSlot(43).setItem(createItem(Material.EXPERIENCE_BOTTLE, 1, "<green><b>修复物品</b></green>"));
@@ -675,7 +675,7 @@ public class GUI {
     }
 
     public Menu createKitRoom() {
-        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "无限物品栏").redraw(true).build();
+        return ChestMenu.builder(6).title(StyleManager.get().getPrimaryColor() + "物品房间").redraw(true).build();
     }
 
     public void allowModification(Slot slot) {
